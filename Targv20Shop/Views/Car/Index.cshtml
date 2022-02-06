@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Targv20Shop.Models.Car.CarListViewModel>
+
+@{ 
+    int queueNumber = 0;
+}
+
+<div>
+    <a asp-action="add" asp-controller="car" type="submit" class="btn btn-danger">Add</a>
+</div>
+<form method="post">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nr</th>
+                <th scope="col">Model</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Car mileage</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var car in Model)
+            {
+                queueNumber++;
+
+                <tr>
+                    <td class="">@queueNumber</td>
+                    <td class="">@car.CarName</td>
+                    <td class="">@car.CarDescription</td>
+                    <td class="">@car.CarPrice</td>
+                    <td class="">@car.CarAmmount</td>
+                    <td>
+                        <a asp-action="edit" asp-controller="car" asp-route-id="@car.Id" class="btn btn-primary">Edit</a>
+                        <input asp-action="delete" asp-controller="car" asp-route-id="@car.Id" type="submit" class="btn btn-danger" value="Delete">
+                    </td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
