@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace Targv20Shop.Core.Dtos
 {
     public class FileToDatabaseDto

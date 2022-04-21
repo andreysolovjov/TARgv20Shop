@@ -31,7 +31,7 @@ namespace Targv20Shop.ApplicationServices.Services
             return result;
         }
 
-        public async Task<Spaceship> Add (SpaceshipDto dto)
+        public async Task<Spaceship> Add(SpaceshipDto dto)
         {
             Spaceship spaceship = new Spaceship();
             FileToDatabase file = new FileToDatabase();

@@ -3,12 +3,10 @@
 
 @if (Model.Id.HasValue)
 {
-    <h1>Update</h1>
-}
-else
-{
-    <h1>Add</h1>
-}
+<h1>Update</h1> }
+            else
+            {
+<h1>Add</h1>}
 
 
 
@@ -56,18 +54,15 @@ else
 
         @foreach (var photo in Model.ExistingFilePaths)
         {
-            <partial name="_Photo" model="photo" />
-        }
+<partial name="_Photo" model="photo" />}
 
         @if (Model.Id.HasValue)
         {
-            <input asp-action="update" asp-controller="product" type="submit" class="btn btn-primary" value="Update">
-            <input asp-action="delete" asp-controller="product" asp-for="Id" type="submit" class="btn btn-danger" value="Delete">
-        }
-        else
-        {
-            <input asp-action="add" asp-controller="product" type="submit" class="btn btn-primary" value="Add">
-        }
+<input asp-action="update" asp-controller="product" type="submit" class="btn btn-primary" value="Update">
+                <input asp-action="delete" asp-controller="product" asp-for="Id" type="submit" class="btn btn-danger" value="Delete"> }
+                            else
+                            {
+                <input asp-action="add" asp-controller="product" type="submit" class="btn btn-primary" value="Add">}
         <a asp-action="index" class="btn btn-primary">Index</a>
 
     </form>
@@ -86,7 +81,6 @@ else
                 else if (files.length == 1) {
                     fileLabel.html(files[0].name);
                 }
-                //$(this).next('.custom-file-label').html(fileLabel);
             });
         });
     </script>

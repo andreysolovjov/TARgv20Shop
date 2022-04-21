@@ -38,7 +38,7 @@ namespace Targv20Shop.Controllers
                     Id = x.Id,
                     Name = x.Name,
                     Price = x.Price,
-                    Ammount = x.Amount,
+                    Amount = x.Amount,
                     Description = x.Description
                 });
 
@@ -55,7 +55,7 @@ namespace Targv20Shop.Controllers
                 RedirectToAction(nameof(Index));
             }
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index), product);
         }
 
         [HttpGet]
@@ -106,15 +106,11 @@ namespace Targv20Shop.Controllers
                 return NotFound();
             }
 
-            var photos = await _context.ExistingFilePath
-                .Where(x => x.ProductId == id)
-                .Select(y => new ExistingFilePathViewModel
-                {
-                    FilePath = y.FilePath,
-                    PhotoId = y.Id
-                })
-                .ToArrayAsync();
-
+            var photos = await _context.ExistingFilePath.Where(x => x.ProductId == id).Select(y => new ExistingFilePathViewModel
+            {
+                FilePath=y.FilePath,
+                PhotoId=y.Id
+            }).ToArrayAsync();
 
             var model = new ProductViewModel();
 
@@ -170,13 +166,11 @@ namespace Targv20Shop.Controllers
             {
                 FilePath = model.FilePath
             };
-
             var image = await _fileService.RemoveImage(dto);
             if (image == null)
             {
                 return RedirectToAction(nameof(Index));
             }
-
             return RedirectToAction(nameof(Index));
         }
     }

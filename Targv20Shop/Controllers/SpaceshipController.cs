@@ -138,7 +138,7 @@ namespace Targv20Shop.Controllers
                 Type = model.Type,
                 CreatedAt = model.CreatedAt,
                 ModifiedAt = model.ModifiedAt,
-                Image = model.Image.Select(x => new FileToDatabaseDto
+                Image = model.Image.Select(x=> new FileToDatabaseDto 
                 {
                     Id = x.Id,
                     ImageData = x.ImageData,
@@ -149,7 +149,7 @@ namespace Targv20Shop.Controllers
 
             var result = await _spaceshipService.Update(dto);
 
-            if(result == null)
+            if (result == null)
             {
                 return RedirectToAction(nameof(Index));
             }
@@ -162,7 +162,7 @@ namespace Targv20Shop.Controllers
         {
             var spaceship = await _spaceshipService.Delete(id);
 
-            if(spaceship == null)
+            if (spaceship == null)
             {
                 return RedirectToAction(nameof(Index));
             }

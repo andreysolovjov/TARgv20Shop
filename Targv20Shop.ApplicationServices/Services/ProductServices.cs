@@ -94,5 +94,53 @@ namespace Targv20Shop.ApplicationServices.Services
 
             return product;
         }
+        //public async Task<ExistingFilePath> RemoveImage(ExistingFilePathDto dto)
+        //{
+        //    var imageId = await _context.ExistingFilePath.FirstOrDefaultAsync(x => x.Id == dto.PhotoId);
+        //    _context.ExistingFilePath.Remove(imageId);
+        //    await _context.SaveChangesAsync();
+
+        //    return imageId;
+        //}
+
+
+        //public string ProcessUploadedFile(ProductDto dto, Product product)
+        //{
+        //    string uniqueFileName = null;
+
+        //    if (dto.Files != null && dto.Files.Count > 0)
+        //    {
+        //        if(dto.Files != null && dto.Files.Count > 0)
+        //        {
+        //            if(!Directory.Exists(_env.WebRootPath + "\\multipleFileUpload\\"))
+        //            {
+        //                Directory.CreateDirectory(_env.WebRootPath + "\\multipleFileUpload\\");
+        //            }
+        //        }
+
+        //        foreach (var photo in dto.Files)
+        //        {
+        //            string uploadsFolder = Path.Combine(_env.WebRootPath, "multipleFileUpload");
+        //            uniqueFileName = Guid.NewGuid().ToString() + "_" + photo.FileName;
+        //            string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+        //            using (var fileStream = new FileStream(filePath, FileMode.Create))
+        //            {
+        //                photo.CopyTo(fileStream);
+
+        //                ExistingFilePath paths = new ExistingFilePath
+        //                {
+        //                    Id = Guid.NewGuid(),
+        //                    FilePath = uniqueFileName,
+        //                    ProductId = product.Id
+        //                };
+
+        //                _context.ExistingFilePath.Add(paths);
+        //            }
+        //        }
+        //    }
+
+        //    return uniqueFileName;
+        //}
     }
 }

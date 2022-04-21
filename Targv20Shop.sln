@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Targv20Shop", "Targv20Shop\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Targv20Shop.Data", "Targv20Shop.Data\Targv20Shop.Data.csproj", "{0F9EA37D-AB16-46F9-BFFD-2FA0FA5C1052}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Targv20Shop.Core", "Targv20Shop.Core\Targv20Shop.Core.csproj", "{C805418C-326A-4651-88B7-E22927A82990}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Targv20Shop.Core", "Targv20Shop.Core\Targv20Shop.Core.csproj", "{C805418C-326A-4651-88B7-E22927A82990}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Targv20Shop.ApplicationServices", "Targv20Shop.ApplicationServices\Targv20Shop.ApplicationServices.csproj", "{41CE0109-FDBD-4E6E-BA96-8CB31C610A6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Targv20Shop.ApplicationServices", "Targv20Shop.ApplicationServices\Targv20Shop.ApplicationServices.csproj", "{41CE0109-FDBD-4E6E-BA96-8CB31C610A6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
